@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #080904;
+}
+
+/* Responsive Navigation Bar */
+.nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #7b604f;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.nav-container1 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav ul li {
+    margin: 5px;
+}
+
+/* Responsive Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    width: 100%; /* Change: Make input expand */
+    max-width: 200px; /* Prevents it from becoming too large */
+}
+
+.search-bar button {
+    padding: 8px 10px;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 🔹 Centered Welcome Text Above Background Image */
+.div-container1 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 🔹 Background Image */
+.div-container1 > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 🔹 Welcome Text (New) */
+.div-container2 {
+    position: absolute; /* Change: Position text over image */
+    top: 50%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+}
+
+.div-container2 > h1 {
+    font-size: 40px;
+    text-align: center;
+    color: white; /* Change: Make text readable over image */
+}
+
+/* Responsive Footer */
+.footer-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #080904;
+}
+
+.footer-container li {
+    list-style: none;
+    padding: 10px;
+    color: white;
+}
+
+/* 🔹 Responsive Design - Mobile & Tablet */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-container1 {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* 🔹 Make Welcome Text Smaller for Mobile */
+    .div-container2 > h1 {
+        font-size: 30px;
+    }
+
+    /* 🔹 Adjust Search Bar for Mobile */
+    .search-bar input {
+        width: 80%;
+    }
+
+    /* 🔹 Adjust Footer */
+    .footer-container {
+        padding: 10px;
+    }
+}
