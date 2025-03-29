@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: #080904;
+}
+
 /* Responsive Navigation Bar */
 .nav {
     width: 100%;
