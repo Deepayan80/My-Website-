@@ -168,3 +168,38 @@ body{
     }
 }
 
+
+.code-container {
+    background: #1e1e1e;
+    color: #dcdcdc;
+    font-family: Consolas, 'Courier New', monospace;
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+    overflow-x: auto;
+    margin: 1em 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+  
+  .code-container pre {
+    margin: 0;
+    white-space: pre;
+  }
+  
+  .copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #3c3c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .copy-btn:hover {
+    background-color: #505050;
+  }
