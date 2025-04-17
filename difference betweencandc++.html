@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepayan's knowledge Base - Difference between C and C++?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleblogs.css">
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav-container">
+            <li>
+                <h1>Deepayan's Knowledge Base</h1>
+            </li>
+            <div class="nav-container1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li>About Me</li>
+                <li>Projects</li>
+                <li>
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                        <button type="button" onclick="searchSite()">Search</button>
+                      </div>
+                </li>
+            </div>
+
+        </ul>
+    </nav>
+    <div class="upper-container">
+        <img src="https://images.pexels.com/photos/604240/pexels-photo-604240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image 5">
+        <h1>Difference Between C and C++?</h1>
+    </div>
+    <div class="content">
+        <h2>Difference between C and C++?</h2>
+        <p>When diving into the world of programming, two names often stand out for beginners and experienced developers alike—<span class="bold">C and C++</span>C and C++. Both are foundational languages in the world of software development, system programming, and embedded systems. Though they share a close relationship—C++ being a direct successor to C—they serve different purposes and come with distinctive features.</p>
+        <p>This blog explores the <span class="bold">key differences between C and C++,</span> covering their history, programming paradigms, performance, use cases, and more.</p>
+        <h2>1. Historical Background</h3>
+        <p><span class="bold">C Language</span> was developed by <span class="bold">Dennis Ritchie</span> in the early 1970s at Bell Labs. It was designed as a general-purpose, procedural programming language for writing operating systems. In fact, Unix was one of the first operating systems written in C. The language offers low-level access to memory and provides control over hardware, making it ideal for system-level programming.</p>
+        <p><span class="bold">C++,</span> on the other hand, was developed by <span class="bold">Bjarne Stroustrup</span> in the early 1980s, also at Bell Labs. Originally known as “C with Classes,” C++ extended the C language by adding <span class="bold">object-oriented programming (OOP)</span> features. Over time, it evolved into a multi-paradigm language that supports procedural, object-oriented, and even generic programming styles.</p>
+        <h2>2. Programming Paradigm</h2>
+        <p>a. <span class="bold">C</span> is a <span class="bold">procedural programming language,</span> meaning it follows a step-by-step approach where the program is divided into functions and instructions that execute in a defined order.</p>
+        <p>b. <span class="bold">C++</span> supports <span class="bold">multiple paradigms,</span> primarily <span class="bold">object-oriented programming,</span> which revolves around objects and classes. It also allows procedural and generic programming, offering much more flexibility in code design.</p>
+        <p>This shift from procedural to object-oriented gives C++ the advantage in building large, complex software systems with better data abstraction and modularity.</p>
+        <h2>3. Object Oriented Features</h2>
+        <p>This is one of the most significant differences:</p>
+        <p>a. <span class="bold">C</span> does not support object-oriented concepts such as <span class="bold">classes, inheritance, polymorphism, or encapsulation.</span></p>
+        <p>b. <span class="bold">C++</span> introduces these concepts, allowing developers to create blueprints (classes) from which objects are instantiated. It also supports features like function overloading, operator overloading, and templates.</p>
+        <p>For example, in C++, you can create reusable and organized code with the help of classes:</p>
+        <div class="code-container">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code>
+          class Car {
+          public:
+              void startEngine() {
+                  cout &lt;&lt; "Engine started" &lt;&lt; endl;
+              }
+          };
+            </code></pre>
+          </div>
+        <p>Such abstraction is not available in C.</p>
+        <h2>4. Standard Library Support</h2>
+        <p>The <span class="bold">C Standard Library</span> is relatively small and includes basic functions for file handling, memory allocation, and string manipulation.</p>
+        <p>In contrast, <span class="bold">C++ has a rich Standard Template Library (STL)</span> C++ has a rich Standard Template Library (STL) that includes ready-to-use classes and functions for data structures (like vectors, lists, maps), algorithms (like sort, search), and more. STL reduces development time and improves code reliability.</p>
+        <h2>5. Code Structure and Syntax</h2>
+        <p>While both languages use similar syntax (as C++ is a superset of C), C++ allows for more structured and cleaner code with additional features:</p>
+        <p><span class="bold">a. Function Overloading: </span>Same function name with different parameters.</p>
+        <p><span class="bold">b. Operator Overloading: </span>Customize the behavior of operators.</p>
+        <p><span class="bold">c. Namespaces: </span>Avoid name collisions in larger projects.</p>
+        <p><span class="bold">d. References: </span>Safer and more intuitive than pointers in some contexts.</p>
+        <p>For example:</p>
+        <div class="code-container">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code>
+            int add(int a, int b) {
+                 return a + b;
+            }
+                
+            float add(float a, float b) {
+                return a + b;
+            }
+                
+            </code></pre>
+        </div>
+        <p>In C, this kind of <span class="bold">function overloading</span> isn’t allowed.</p>
+        <h2>6. Memory Management</h2>
+        <p><span class="bold">a. C</span> provides <span class="bold">manual memory management</span> using functions like malloc() and free().</p>
+        <div class="code-container">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code>
+                int* ptr = (int*) malloc(sizeof(int));
+                free(ptr);
+                
+            </code></pre>
+        </div>
+        <p><span class="bold">b. C++</span> enhances this with <span class="bold">constructors/destructors</span> and operators like new and delete for memory allocation and deallocation.</p>
+        <div class="code-container">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code>
+                int* ptr = new int;
+                delete ptr;
+                
+                
+            </code></pre>
+        </div>
+        <p>C++ also supports <span class="bold">RAII (Resource Acquisition Is Initialization)</span> which ties resource management to object lifetimes, reducing memory leaks.</p>
+        <h2>7. Error Handling</h2>
+        <p>In <span class="bold">C,</span> error handling is typically done using return values and error codes.</p>
+        <p>In <span class="bold">C++,</span> exception handling is built into the language using try, catch, and throw blocks, making it easier to manage runtime errors gracefully.</p>
+        <div class="code-container">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code>
+                try {
+                    // risky code
+                } catch (exception& e) {
+                    cout << "Error: " << e.what();
+                }
+                
+                
+            </code></pre>
+        </div>
+        <h2>8. Compatibility</h2>
+        <p>C++ is mostly <span class="bold">backward-compatible with C,</span> meaning most valid C code can run in a C++ compiler. However, there are some exceptions and subtle differences, such as how implicit function declarations are handled and name mangling due to function overloading in C++.</p>
+        <h2>9. Use Cases</h2>
+        <p><span class="bold">C is preferred for:</span></p>
+        <p>a. Operating System (Linux, Windows Kernel)</p>
+        <p>b. Embedded Systems</p>
+        <p>c. Low Level System Drivers</p>
+        <p>d. Firmware and Bios development</p>
+        <p><span class="bold">C++ is widely used for:</span></p>
+        <p>a. Game development</p>
+        <p>b. GUI based applications</p>
+        <p>c. Real time simulations</p>
+        <p>d. High performance software like browsers, databases and trading systems</p>
+        <h2>10. Performance</h2>
+        <p>Both languages are known for their high performance.</p>
+        <p><span class="bold">a. C</span> has slightly better performance in raw computation due to its simplicity and minimal overhead.</p>
+        <p><span class="bold">b. C++,</span> while powerful, may introduce a slight overhead due to features like virtual functions, runtime type identification, and exception handling.</p>
+        <p>However, well-optimized C++ code can match or even exceed the performance of C in certain scenarios, especially when STL and modern practices are used effectively.</p>
+        <h2>11. Community and Ecosystem</h2>
+        <p>Both languages have vast, active communities with decades of legacy code and documentation.</p>
+        <p>a. C has more presence in academic and low-level system communities.</p>
+        <p>b. C++ is more dominant in large-scale software industries like game development, fintech, and real-time systems.</p>
+        <h2>Conclusion</h2>
+        <p>C and C++ are both powerful and efficient programming languages, each excelling in different areas. C’s simplicity and control make it ideal for system-level programming and embedded systems. C++, with its object-oriented features and rich standard libraries, is better suited for complex applications that require modular design and reusability.</p>
+        <p>Choosing between C and C++ depends on the nature of your project. For low-level programming where direct hardware control and efficiency are crucial, C is preferred. For large-scale applications requiring scalability, abstraction, and code reuse, C++ is the go-to language.</p>
+        <p>Understanding both languages not only strengthens your programming fundamentals but also opens up opportunities across a wide spectrum of domains in software development.</p>
+    </div>
+    <button class="btn">
+        <a href="https://youtube.com/shorts/kQU8WyV1EPA?si=G5kFqH1B4iQ4q9Af" target="_blank" style="text-decoration: none; color: inherit;">
+            Watch Video
+        </a>
+    </button>
+    <div class="nav-buttons">
+        <a href="whylearnc.html" class="nav-btn">Previous</a>
+        <a href="difference betweencandc++.html" class="nav-btn">Next</a>
+      </div>
+      <footer>
+        <div class="footer-container">
+            <ul><li>© 2025 Deepayan's Knowledge Base. All Rights Reserved.</li>
+            <li>Powered by Deepayan Das | Sharing Knowledge, Inspiring Growth.</li>
+            <li>📧 Contact: [Your Email] | 🌐 Website: [Your Website URL]</li>
+            <li>📍 Based in Kishanganj, Bihar, India</li>
+            <li>Follow Us: [Social Media Links]</li>
+         </ul> 
+         </div>
+     </footer>
+    <script src="script.js"></script>
+</body>
+</html>
